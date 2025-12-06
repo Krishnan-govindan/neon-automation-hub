@@ -6,7 +6,6 @@ const navItems = [
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
   { name: 'Experience', href: '#experience' },
-  { name: 'Projects', href: '#projects' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -36,9 +35,8 @@ const Navbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <span className="text-2xl font-poppins font-bold gradient-text">M</span>
-            <span className="text-lg font-poppins font-semibold text-foreground hidden sm:block">
+          <a href="#" className="flex items-center">
+            <span className="text-lg font-poppins font-semibold text-foreground">
               Manivasagam
             </span>
           </a>
