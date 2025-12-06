@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { Download, Mail } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import profilePhoto from '@/assets/profile-photo.png';
 
 const HeroSection = () => {
   return (
@@ -53,15 +54,25 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Pre-title Badge */}
+          {/* Profile Photo */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-8"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
           >
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-primary text-sm font-inter">Available for Projects</span>
+            <div className="relative inline-block">
+              <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-2 border-primary/50 shadow-[0_0_30px_hsl(var(--primary)/0.3)] mx-auto">
+                <img 
+                  src={profilePhoto} 
+                  alt="Manivasagam" 
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 22%' }}
+                />
+              </div>
+              {/* Glow Ring */}
+              <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-pulse" />
+            </div>
           </motion.div>
 
           {/* Main Title */}
@@ -92,26 +103,20 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg md:text-xl text-muted-foreground font-inter max-w-2xl mx-auto mb-12"
           >
-            Transforming businesses with intelligent automation, AI-powered solutions, and cutting-edge web technologies.
+            Building intelligent automation systems, AI-powered solutions, and cutting-edge web technologies.
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex items-center justify-center"
           >
             <Button variant="hero" size="lg" asChild>
               <a href="#contact">
                 <Mail className="mr-2" />
                 Hire Me
-              </a>
-            </Button>
-            <Button variant="heroOutline" size="lg" asChild>
-              <a href="#" download>
-                <Download className="mr-2" />
-                Download Resume
               </a>
             </Button>
           </motion.div>

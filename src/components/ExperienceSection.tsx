@@ -6,7 +6,7 @@ import { Briefcase, Calendar, CheckCircle2 } from 'lucide-react';
 const experiences = [
   {
     company: 'Fulsuccess.com',
-    period: 'Last 1 Year',
+    period: '3 Years Experience',
     role: 'Automation Specialist',
     responsibilities: [
       'End-to-end automation projects using Make.com',
@@ -18,7 +18,7 @@ const experiences = [
   },
   {
     company: 'IndiaTherapist.com & IndianLifeCoaches.com',
-    period: 'First 2 Years',
+    period: '',
     role: 'Digital Marketing & Web Developer',
     responsibilities: [
       'Created websites & landing pages using Mastermind, GoHighLevel, WordPress',
@@ -96,14 +96,16 @@ const ExperienceSection = () => {
                 </div>
 
                 {/* Period */}
-                <div
-                  className={`flex items-center gap-2 mb-4 ${
-                    index % 2 === 0 ? 'md:justify-end' : ''
-                  }`}
-                >
-                  <Calendar className="w-4 h-4 text-muted-foreground" />
-                  <span className="text-sm text-muted-foreground font-inter">{exp.period}</span>
-                </div>
+                {exp.period && (
+                  <div
+                    className={`flex items-center gap-2 mb-4 ${
+                      index % 2 === 0 ? 'md:justify-end' : ''
+                    }`}
+                  >
+                    <Calendar className="w-4 h-4 text-muted-foreground" />
+                    <span className="text-sm text-muted-foreground font-inter">{exp.period}</span>
+                  </div>
+                )}
 
                 {/* Responsibilities */}
                 <ul className={`space-y-3 ${index % 2 === 0 ? 'md:text-left' : ''}`}>
