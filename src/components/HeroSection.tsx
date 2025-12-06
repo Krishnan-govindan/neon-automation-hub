@@ -53,94 +53,96 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Profile Photo */}
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+          {/* Left Content */}
+          <div className="flex-1 text-center lg:text-left">
+            {/* Main Title */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-4xl md:text-6xl lg:text-7xl font-poppins font-bold mb-6"
+            >
+              <span className="text-foreground">Hi, I'm </span>
+              <span className="gradient-text text-glow">Manivasagam</span>
+            </motion.h1>
+
+            {/* Role */}
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-xl md:text-2xl lg:text-3xl font-poppins font-semibold text-secondary mb-6"
+            >
+              Automation Specialist
+            </motion.h2>
+
+            {/* Tagline */}
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-base md:text-lg text-muted-foreground font-inter max-w-xl mb-10"
+            >
+              Building intelligent automation systems, AI-powered solutions, and cutting-edge web technologies.
+            </motion.p>
+
+            {/* CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="flex items-center justify-center lg:justify-start"
+            >
+              <Button variant="hero" size="lg" asChild>
+                <a href="#contact">
+                  <Mail className="mr-2" />
+                  Hire Me
+                </a>
+              </Button>
+            </motion.div>
+          </div>
+
+          {/* Right Image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="mb-8"
+            initial={{ opacity: 0, scale: 0.8, x: 50 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="flex-1 flex justify-center lg:justify-end"
           >
-            <div className="relative inline-block">
-              <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-2 border-primary/50 shadow-[0_0_30px_hsl(var(--primary)/0.3)] mx-auto">
+            <div className="relative">
+              <div className="w-72 h-80 md:w-80 md:h-96 lg:w-96 lg:h-[28rem] overflow-hidden border-2 border-primary/30 shadow-[0_0_40px_hsl(var(--primary)/0.25)] rounded-2xl">
                 <img 
                   src={profilePhoto} 
                   alt="Manivasagam" 
                   className="w-full h-full object-cover"
-                  style={{ objectPosition: 'center 22%' }}
                 />
               </div>
-              {/* Glow Ring */}
-              <div className="absolute inset-0 rounded-full border-2 border-primary/20 animate-pulse" />
+              {/* Glow Effect */}
+              <div className="absolute -inset-1 rounded-2xl border border-primary/20 blur-sm" />
             </div>
           </motion.div>
+        </div>
 
-          {/* Main Title */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-poppins font-bold mb-6"
-          >
-            <span className="text-foreground">Hi, I'm </span>
-            <span className="gradient-text text-glow">Manivasagam</span>
-          </motion.h1>
-
-          {/* Role */}
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-poppins font-semibold text-secondary mb-6"
-          >
-            Automation Specialist
-          </motion.h2>
-
-          {/* Tagline */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg md:text-xl text-muted-foreground font-inter max-w-2xl mx-auto mb-12"
-          >
-            Building intelligent automation systems, AI-powered solutions, and cutting-edge web technologies.
-          </motion.p>
-
-          {/* CTA Button */}
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.2 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        >
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex items-center justify-center"
-          >
-            <Button variant="hero" size="lg" asChild>
-              <a href="#contact">
-                <Mail className="mr-2" />
-                Hire Me
-              </a>
-            </Button>
-          </motion.div>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.2 }}
-            className="absolute bottom-8 left-1/2 -translate-x-1/2"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+            className="w-6 h-10 rounded-full border-2 border-primary/50 flex items-start justify-center p-2"
           >
             <motion.div
-              animate={{ y: [0, 10, 0] }}
+              animate={{ opacity: [1, 0, 1], y: [0, 8, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-6 h-10 rounded-full border-2 border-primary/50 flex items-start justify-center p-2"
-            >
-              <motion.div
-                animate={{ opacity: [1, 0, 1], y: [0, 8, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-                className="w-1 h-2 rounded-full bg-primary"
-              />
-            </motion.div>
+              className="w-1 h-2 rounded-full bg-primary"
+            />
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
