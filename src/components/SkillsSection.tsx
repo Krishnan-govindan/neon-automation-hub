@@ -14,37 +14,37 @@ const skills = [
   {
     icon: Workflow,
     title: 'Automation',
-    description: 'End-to-end workflow automation using Make.com and other tools to streamline business processes.',
+    description: 'Building structured workflow automations using Make.com and related tools to improve process efficiency.',
     color: 'primary',
   },
   {
     icon: Brain,
     title: 'AI',
-    description: 'Leveraging AI tools to build intelligent solutions and enhance productivity.',
+    description: 'Applying AI tools to automate tasks, optimize operations, and enhance user experience.',
     color: 'secondary',
   },
   {
     icon: Boxes,
     title: 'Make.com',
-    description: 'Expert-level proficiency in building complex automation scenarios and integrations.',
+    description: 'Experienced in creating end-to-end automation scenarios, integrations, and system workflows.',
     color: 'accent',
   },
   {
     icon: Globe,
     title: 'Web Development',
-    description: 'Creating AI-powered websites and landing pages using modern technologies.',
+    description: 'Developing modern websites and landing pages with clean UI and functional automation layers.',
     color: 'primary',
   },
   {
     icon: Target,
     title: 'Ads & Funnels',
-    description: 'Running Google Ads, Meta Ads, and building high-converting marketing funnels.',
+    description: 'Supporting marketing systems through Google Ads, Meta Ads, and structured funnel setups.',
     color: 'secondary',
   },
   {
     icon: MessageSquare,
     title: 'Chatbots',
-    description: 'Building intelligent chatbots for customer engagement and lead generation.',
+    description: 'Creating simple, functional chatbots for workflow routing and basic task automation.',
     color: 'accent',
   },
 ];

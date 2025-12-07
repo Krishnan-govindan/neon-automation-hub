@@ -6,8 +6,7 @@ import {
   Mail, 
   Linkedin, 
   Github, 
-  Twitter,
-  MapPin
+  Twitter
 } from 'lucide-react';
 
 const ContactSection = () => {
@@ -51,11 +50,8 @@ const ContactSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-card rounded-2xl p-8 md:p-12 card-glow holographic-border text-center"
           >
-            <h3 className="text-2xl font-poppins font-semibold text-foreground mb-6">
-              Let's Build Something Amazing Together
-            </h3>
             <p className="text-muted-foreground font-inter mb-8 leading-relaxed">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+              For professional communication or opportunities, you can reach me directly through the email below.
             </p>
 
             {/* Contact Details */}
@@ -67,15 +63,6 @@ const ContactSection = () => {
                 <div className="text-left">
                   <p className="text-sm text-muted-foreground font-inter">Email</p>
                   <p className="text-foreground font-inter">manivasagam.tech@gmail.com</p>
-                </div>
-              </div>
-              <div className="flex items-center justify-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-secondary" />
-                </div>
-                <div className="text-left">
-                  <p className="text-sm text-muted-foreground font-inter">Location</p>
-                  <p className="text-foreground font-inter">Available Worldwide (Remote)</p>
                 </div>
               </div>
             </div>
