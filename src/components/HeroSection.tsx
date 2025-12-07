@@ -84,7 +84,7 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-base md:text-lg text-muted-foreground font-inter max-w-xl mb-10"
             >
-              Building intelligent automation systems, AI-powered solutions, and cutting-edge web technologies.
+              Automation Specialist with hands-on experience in Make.com, AI tools, workflow systems, and modern web technologies. Skilled in building scalable automations and smart digital systems.
             </motion.p>
 
             {/* CTA Button */}

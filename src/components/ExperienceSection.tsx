@@ -1,31 +1,20 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Briefcase, Calendar, CheckCircle2 } from 'lucide-react';
+import { Briefcase, Calendar } from 'lucide-react';
 
 const experiences = [
   {
     company: 'Fulsuccess.com',
-    period: '3 Years Experience',
+    period: 'Automation Specialist',
     role: 'Automation Specialist',
-    responsibilities: [
-      'End-to-end automation projects using Make.com',
-      'Helping business owners reduce workload through automation',
-      'Built AI-powered websites in minutes, delivered before deadlines',
-      'Worked with GitHub workflows',
-      'Built intelligent chatbots',
-    ],
+    description: 'Worked on a wide range of automation projects using Make.com and AI tools. Built structured workflows, automated repetitive processes, and contributed to digital system improvements. Experienced in using GitHub for version workflow and building functional AI-powered interfaces and chatbots.',
   },
   {
     company: 'IndiaTherapist.com & IndianLifeCoaches.com',
-    period: '',
+    period: 'Digital Marketing & Web Developer',
     role: 'Digital Marketing & Web Developer',
-    responsibilities: [
-      'Created websites & landing pages using Mastermind, GoHighLevel, WordPress',
-      'Built lead automation systems',
-      'Created ad creatives for marketing',
-      'Managed Google Ads and ran Meta Ads',
-    ],
+    description: 'Built websites and landing pages using GoHighLevel, Mastermind, and WordPress. Created automation flows for lead management and supported marketing systems through ad creatives, Google Ads, and Meta Ads integrations.',
   },
 ];
 
@@ -107,15 +96,10 @@ const ExperienceSection = () => {
                   </div>
                 )}
 
-                {/* Responsibilities */}
-                <ul className={`space-y-3 ${index % 2 === 0 ? 'md:text-left' : ''}`}>
-                  {exp.responsibilities.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground font-inter text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+                {/* Description */}
+                <p className={`text-muted-foreground font-inter text-sm leading-relaxed ${index % 2 === 0 ? 'md:text-left' : ''}`}>
+                  {exp.description}
+                </p>
               </div>
             </motion.div>
           ))}

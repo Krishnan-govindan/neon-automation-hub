@@ -95,7 +95,7 @@ const AboutSection = () => {
 
             <div className="space-y-6 text-muted-foreground font-inter leading-relaxed">
               <p>
-                I specialize in building intelligent automation systems that help businesses reduce workload and increase efficiency. With a strong foundation in both technical development and strategic implementation, I deliver solutions that make a real impact.
+                I am an Automation Specialist with more than 3 years of experience designing workflow systems, integrating AI tools, and developing efficient digital processes. My background combines technical expertise with a strong understanding of operational needs, enabling me to build practical, reliable, and business-ready automation solutions.
               </p>
 
               <div className="space-y-3">
