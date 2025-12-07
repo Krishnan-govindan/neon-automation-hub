@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // GitHub Pages project site → MUST use repo name as base
-const base = "/neon-automation-hub/";
+const base = "/";
 
 export default defineConfig(({ mode }) => ({
   base,
